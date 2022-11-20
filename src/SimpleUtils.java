@@ -25,7 +25,7 @@ public class SimpleUtils {
     public static <T extends Comparable<T>> T least(Collection<T> items, boolean from_start) {
         return from_start ? items.stream().min(Comparator.comparing((T x) -> x)).get()
                 : items.stream().min(Comparator.comparing((T x) -> x)
-                        .thenComparing((T x) -> Arrays.asList(items.toArray()).indexOf(x))).get();
+                .thenComparing((T x) -> Arrays.asList(items.toArray()).indexOf(x))).get();
 
     }
 
