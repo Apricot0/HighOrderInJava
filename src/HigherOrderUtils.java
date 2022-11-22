@@ -112,17 +112,6 @@ public class HigherOrderUtils {
         return null;
     }
 
-    static class FunctionComposition<T, U, R> {
-        public BiFunction<Function<T, U>, Function<U, R>, Function<T, R>> composition = new BiFunction<Function<T, U>, Function<U, R>, Function<T, R>>() {
-            @Override
-            public Function<T, R> apply(Function<T, U> tuFunction, Function<U, R> urFunction) {
-                return tuFunction.andThen(urFunction);
-            }
-        };
-
-
-    }
-
     public static void main(String... args) {
         List<Double> numbers = Arrays.asList(-0.5, 2d, 3d, 0d, 4d); // documentation example
         List<NamedBiFunction<Double, Double, Double>> operations = Arrays.asList(add,multiply,add,divide);

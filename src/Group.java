@@ -49,7 +49,7 @@ public interface Group<T> {
     */
     default T exponent(T t, int k) {
     if (k < 0)
-    throw new IllegalArgumentException("The exponent must be a non-negative integer value.");
-    return k == 0 ? identity() : binaryOperation(t, exponent(t, k - 1));
+      throw new IllegalArgumentException("The exponent must be a non-negative integer value.");
+      return k == 0 ? identity() : binaryOperation(t, exponent(t, k - 1));
     }
-    }
+}
